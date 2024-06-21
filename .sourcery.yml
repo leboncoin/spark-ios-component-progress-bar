@@ -3,50 +3,11 @@ configurations:
       include:
         - Sources/
       exclude:
-        - Sources/SparkProgressBarTesting/
-        - Sources/SparkProgressBarSnapshotTesting/
+        - Sources/Testing/
+        - Sources/SnapshotTesting/
     templates:
-      - ../spark-ios-common/.sourcery/template/SparkAutoMockable.stencil
-    output: Sources/SparkProgressBarTesting/Generated/AutoMockable.generated.swift
-    args:
-      autoMockableImports: [Combine, SparkTheming]
-      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
-      autoMockableTestableImports: [SparkProgressBar]
-  - sources:
-      include:
-        - Sources/
-      exclude:
-        - Sources/SparkProgressBarTesting/
-        - Sources/SparkProgressBarSnapshotTesting/
-    templates:
-      - ../spark-ios-common/.sourcery/template/SparkAutoMockTest.stencil
-    output: Sources/SparkProgressBarTesting/Generated/AutoMockTest.generated.swift
-    args:
-      autoMockableImports: [Combine, SparkTheming]
-      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
-      autoMockableTestableImports: [SparkProgressBar]
-  - sources:
-      include:
-        - Sources/
-      exclude:
-        - Sources/SparkProgressBarTesting/
-        - Sources/SparkProgressBarSnapshotTesting/
-    templates:
-      - ../spark-ios-common/.sourcery/template/SparkAutoPublisherTest.stencil
-    output: Sources/SparkProgressBarTesting/Generated/AutoPublisherTest.generated.swift
-    args:
-      autoMockableImports: [Combine, SparkTheming]
-      autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
-      autoMockableTestableImports: [SparkProgressBar]
-  - sources:
-      include:
-        - Sources/
-      exclude:
-        - Sources/SparkProgressBarTesting/
-        - Sources/SparkProgressBarSnapshotTesting/
-    templates:
-      - ../spark-ios-common/.sourcery/template/SparkAutoViewModelStub.stencil
-    output: Sources/SparkProgressBarTesting/Generated/AutoViewModelStub.generated.swift
+      - ../spark-ios-common/.sourcery/template/
+    output: Sources/Testing/Generated/Sourcery.generated.swift
     args:
       autoMockableImports: [Combine, SparkTheming]
       autoMockableSPIImports: [SparkCommon, SparkCommonTesting, SparkThemingTesting]
