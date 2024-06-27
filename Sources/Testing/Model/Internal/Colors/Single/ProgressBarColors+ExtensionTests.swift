@@ -7,7 +7,7 @@
 //
 
 @testable import SparkProgressBar
-import SparkThemingTesting
+@_spi(SI_SPI) import SparkThemingTesting
 import SparkTheming
 import SparkTheme
 
