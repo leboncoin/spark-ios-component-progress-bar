@@ -10,7 +10,7 @@ import XCTest
 @testable import SparkProgressBar
 @_spi(SI_SPI) @testable import SparkProgressBarTesting
 @_spi(SI_SPI) import SparkCommon
-import SparkThemingTesting
+@_spi(SI_SPI) import SparkThemingTesting
 import Combine
 
 final class ProgressBarMainViewModelTests: XCTestCase {
