@@ -3,7 +3,7 @@
 //  SparkProgressBarSnapshotTests
 //
 //  Created by robin.lemaire on 18/10/2023.
-//  Copyright © 2023 Adevinta. All rights reserved.
+//  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
 @testable import SparkProgressBar
