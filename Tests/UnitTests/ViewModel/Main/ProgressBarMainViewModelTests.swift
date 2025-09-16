@@ -1,14 +1,14 @@
 //
 // ProgressBarMainViewModelTests.swift
-//  SparkProgressBarTests
+//  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
 import XCTest
-@testable import SparkProgressBar
-@_spi(SI_SPI) @testable import SparkProgressBarTesting
+@testable import SparkComponentProgressBar
+@_spi(SI_SPI) @testable import SparkComponentProgressBarTesting
 @_spi(SI_SPI) import SparkCommon
 @_spi(SI_SPI) import SparkThemingTesting
 import Combine

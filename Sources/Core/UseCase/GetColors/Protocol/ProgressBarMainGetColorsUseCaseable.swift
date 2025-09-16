@@ -1,6 +1,6 @@
 //
 //  ProgressBarMainGetColorsUseCaseable.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -15,6 +15,6 @@ protocol ProgressBarMainGetColorsUseCaseable {
 
     // sourcery: colors = "Identical", dims = "Identical"
     func execute(intent: Intent,
-                 colors: Colors,
-                 dims: Dims) -> Return
+                 colors: any Colors,
+                 dims: any Dims) -> Return
 }

@@ -1,12 +1,12 @@
 //
 //  ProgressBarAnimatedData+ExtensionTests.swift
-//  SparkProgressBarTests
+//  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 29/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
-@testable import SparkProgressBar
+@testable import SparkComponentProgressBar
 import Foundation
 
 extension ProgressBarAnimatedData {

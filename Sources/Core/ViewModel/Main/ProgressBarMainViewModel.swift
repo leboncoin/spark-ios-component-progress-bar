@@ -1,6 +1,6 @@
 //
 // ProgressBarMainViewModel.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -19,29 +19,29 @@ class ProgressBarMainViewModel<
     // MARK: - Properties
 
     private let frameworkType: FrameworkType
-    private(set) var theme: Theme
+    private(set) var theme: any Theme
     private(set) var intent: GetColorsUseCase.Intent
     private(set) var shape: ProgressBarShape
 
     // MARK: - Published Properties
 
-    @Published private (set) var colors: GetColorsUseCase.Return?
-    @Published private (set) var cornerRadius: CGFloat?
+    @Published private(set) var colors: GetColorsUseCase.Return?
+    @Published private(set) var cornerRadius: CGFloat?
 
     // MARK: - Private Properties
 
     private let getColorsUseCase: GetColorsUseCase
-    private let getCornerRadiusUseCase: ProgressBarGetCornerRadiusUseCaseable
+    private let getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseable
 
     // MARK: - Initialization
 
     init(
         for frameworkType: FrameworkType,
-        theme: Theme,
+        theme: any Theme,
         intent: GetColorsUseCase.Intent,
         shape: ProgressBarShape,
         getColorsUseCase: GetColorsUseCase,
-        getCornerRadiusUseCase: ProgressBarGetCornerRadiusUseCaseable = ProgressBarGetCornerRadiusUseCase()
+        getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseable = ProgressBarGetCornerRadiusUseCase()
     ) {
         self.frameworkType = frameworkType
 
@@ -69,7 +69,7 @@ class ProgressBarMainViewModel<
 
     // MARK: - Setter
 
-    func set(theme: Theme) {
+    func set(theme: any Theme) {
         self.theme = theme
 
         self.updateAll()
