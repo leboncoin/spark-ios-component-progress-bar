@@ -1,6 +1,6 @@
 //
 //  ProgressBarDoubleViewSnapshotTests.swift
-//  SparkProgressBarTests
+//  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 05/10/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 import SnapshotTesting
-@testable import SparkProgressBar
+@testable import SparkComponentProgressBar
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 import SparkTheming
 import SparkTheme
@@ -18,7 +18,7 @@ final class ProgressBarDoubleViewSnapshotTests: SwiftUIComponentSnapshotTestCase
 
     // MARK: - Properties
 
-    private let theme: Theme = SparkTheme.shared
+    private let theme: any Theme = SparkTheme.shared
 
     // MARK: - Tests
 

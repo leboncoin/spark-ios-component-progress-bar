@@ -1,6 +1,6 @@
 //
 //  ProgressBarIndeterminateUIView.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 25/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -21,7 +21,7 @@ public final class ProgressBarIndeterminateUIView: ProgressBarMainUIView {
     // MARK: - Public Properties
 
     /// The spark theme of the progress bar indeterminate.
-    public var theme: Theme {
+    public var theme: any Theme {
         get {
             return self.viewModel.theme
         }
@@ -70,7 +70,7 @@ public final class ProgressBarIndeterminateUIView: ProgressBarMainUIView {
     ///   - intent: The intent of the progress bar indeterminate.
     ///   - shape: The shape of the progress bar indeterminate.
     public init(
-        theme: Theme,
+        theme: any Theme,
         intent: ProgressBarIntent,
         shape: ProgressBarShape
     ) {

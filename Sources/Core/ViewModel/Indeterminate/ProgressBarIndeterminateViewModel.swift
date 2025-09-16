@@ -1,6 +1,6 @@
 //
 //  ProgressBarIndeterminateViewModel.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -26,18 +26,18 @@ final class ProgressBarIndeterminateViewModel: ProgressBarMainViewModel<Progress
     @Published private(set) var animationStatus: ProgressBarIndeterminateStatus?
     @Published private(set) var indicatorOpacity: Double?
 
-    private let getAnimatedDataUseCase: ProgressBarGetAnimatedDataUseCaseable
+    private let getAnimatedDataUseCase: any ProgressBarGetAnimatedDataUseCaseable
 
     // MARK: - Initialization
 
     init(
         for frameworkType: FrameworkType,
-        theme: Theme,
+        theme: any Theme,
         intent: ProgressBarIntent,
         shape: ProgressBarShape,
         isAnimating: Bool,
         getColorsUseCase: ProgressBarGetColorsUseCase = ProgressBarGetColorsUseCase(),
-        getAnimatedDataUseCase: ProgressBarGetAnimatedDataUseCaseable = ProgressBarGetAnimatedDataUseCase()
+        getAnimatedDataUseCase: any ProgressBarGetAnimatedDataUseCaseable = ProgressBarGetAnimatedDataUseCase()
     ) {
         self.isAnimating = isAnimating
 

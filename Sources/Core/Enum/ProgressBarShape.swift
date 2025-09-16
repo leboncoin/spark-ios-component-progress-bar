@@ -1,6 +1,6 @@
 //
 //  ProgressBarShape.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 06/10/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.

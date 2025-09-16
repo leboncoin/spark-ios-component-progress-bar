@@ -18,7 +18,7 @@ You are a developer ? A technical documentation in _DocC_ is available [here](ht
 
 ### Swift Package Manager
 
-_Note: Instructions below are for using **SPM** without the Xcode UI. It's the easiest to go to your Project Settings -> Swift Packages and add SparkProgressBar from there._
+_Note: Instructions below are for using **SPM** without the Xcode UI. It's the easiest to go to your Project Settings -> Swift Packages and add SparkComponentProgressBar from there._
 
 To integrate using Apple's Swift package manager, without Xcode integration, add the following as a dependency to your `Package.swift`:
 
@@ -26,7 +26,7 @@ To integrate using Apple's Swift package manager, without Xcode integration, add
 .package(url: "https://github.com/leboncoin/spark-ios-component-progress-bar.git", .upToNextMajor(from: "1.0.0"))
 ```
 
-and then specify `SparkProgressBar` as a dependency of the Target in which you wish to use the SparkProgressBar.
+and then specify `SparkComponentProgressBar` as a dependency of the Target in which you wish to use the SparkComponentProgressBar.
 
 Here's an example `Package.swift`:
 
@@ -55,7 +55,7 @@ let package = Package(
             name: "MyPackage",
             dependencies: [
                 .product(
-                    name: "SparkProgressBar",
+                    name: "SparkComponentProgressBar",
                     package: "spark-ios-component-progress-bar"
                 ),
             ]

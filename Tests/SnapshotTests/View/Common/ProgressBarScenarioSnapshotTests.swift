@@ -1,12 +1,12 @@
 //
 //  ProgressBarScenarioSnapshotTests.swift
-//  SparkProgressBarSnapshotTests
+//  SparkComponentProgressBarSnapshotTests
 //
 //  Created by robin.lemaire on 18/10/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
-@testable import SparkProgressBar
+@testable import SparkComponentProgressBar
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 import UIKit
 import SwiftUI

@@ -1,6 +1,6 @@
 //
 //  ProgressBarUIView.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 25/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -18,7 +18,7 @@ public final class ProgressBarUIView: ProgressBarMainUIView {
     // MARK: - Public Properties
 
     /// The spark theme of the progress bar.
-    public var theme: Theme {
+    public var theme: any Theme {
         get {
             return self.viewModel.theme
         }
@@ -70,7 +70,7 @@ public final class ProgressBarUIView: ProgressBarMainUIView {
     ///   - intent: The intent of the progress bar.
     ///   - shape: The shape of the progress bar.
     public init(
-        theme: Theme,
+        theme: any Theme,
         intent: ProgressBarIntent,
         shape: ProgressBarShape
     ) {

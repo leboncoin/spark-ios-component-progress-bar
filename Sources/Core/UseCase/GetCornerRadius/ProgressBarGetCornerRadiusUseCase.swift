@@ -1,6 +1,6 @@
 //
 //  ProgressBarGetCornerRadiusUseCase.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 06/10/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -15,7 +15,7 @@ protocol ProgressBarGetCornerRadiusUseCaseable {
     // sourcery: border = "Identical"
     func execute(
         shape: ProgressBarShape,
-        border: Border
+        border: any Border
     ) -> CGFloat
 }
 
@@ -29,7 +29,7 @@ struct ProgressBarGetCornerRadiusUseCase: ProgressBarGetCornerRadiusUseCaseable 
 
     func execute(
         shape: ProgressBarShape,
-        border: Border
+        border: any Border
     ) -> CGFloat {
         switch shape {
         case .rounded:

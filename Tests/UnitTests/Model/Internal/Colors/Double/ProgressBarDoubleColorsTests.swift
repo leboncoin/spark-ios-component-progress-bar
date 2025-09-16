@@ -1,12 +1,12 @@
 //
 //  ProgressBarDoubleColorsTests.swift
-//  SparkProgressBarTests
+//  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
 //
 
-@testable import SparkProgressBar
+@testable import SparkComponentProgressBar
 import SparkTheme
 import XCTest
 

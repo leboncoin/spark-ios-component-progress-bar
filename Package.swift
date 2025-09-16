@@ -5,18 +5,18 @@ import PackageDescription
 
 // swiftlint:disable all
 let package = Package(
-    name: "SparkProgressBar",
+    name: "SparkComponentProgressBar",
     platforms: [
         .iOS(.v16)
     ],
     products: [
         .library(
-            name: "SparkProgressBar",
-            targets: ["SparkProgressBar"]
+            name: "SparkComponentProgressBar",
+            targets: ["SparkComponentProgressBar"]
         ),
         .library(
-            name: "SparkProgressBarTesting",
-            targets: ["SparkProgressBarTesting"]
+            name: "SparkComponentProgressBarTesting",
+            targets: ["SparkComponentProgressBarTesting"]
         )
     ],
     dependencies: [
@@ -33,7 +33,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SparkProgressBar",
+            name: "SparkComponentProgressBar",
             dependencies: [
                 .product(
                     name: "SparkCommon",
@@ -47,9 +47,9 @@ let package = Package(
             path: "Sources/Core"
         ),
         .target(
-            name: "SparkProgressBarTesting",
+            name: "SparkComponentProgressBarTesting",
             dependencies: [
-                "SparkProgressBar",
+                "SparkComponentProgressBar",
                 .product(
                     name: "SparkCommon",
                     package: "spark-ios-common"
@@ -70,10 +70,10 @@ let package = Package(
             path: "Sources/Testing"
         ),
         .testTarget(
-            name: "SparkProgressBarUnitTests",
+            name: "SparkComponentProgressBarUnitTests",
             dependencies: [
-                "SparkProgressBar",
-                "SparkProgressBarTesting",
+                "SparkComponentProgressBar",
+                "SparkComponentProgressBarTesting",
                 .product(
                     name: "SparkCommonTesting",
                     package: "spark-ios-common"
@@ -86,10 +86,10 @@ let package = Package(
             path: "Tests/UnitTests"
         ),
         .testTarget(
-            name: "SparkProgressBarSnapshotTests",
+            name: "SparkComponentProgressBarSnapshotTests",
             dependencies: [
-                "SparkProgressBar",
-                "SparkProgressBarTesting",
+                "SparkComponentProgressBar",
+                "SparkComponentProgressBarTesting",
                 .product(
                     name: "SparkCommonSnapshotTesting",
                     package: "spark-ios-common"

@@ -1,6 +1,6 @@
 //
 //  ProgressBarGetColorUseCase.swift
-//  SparkProgressBar
+//  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
 //  Copyright © 2023 Leboncoin. All rights reserved.
@@ -14,8 +14,8 @@ struct ProgressBarDoubleGetColorsUseCase: ProgressBarMainGetColorsUseCaseable {
 
     func execute(
         intent: ProgressBarDoubleIntent,
-        colors: Colors,
-        dims: Dims
+        colors: any Colors,
+        dims: any Dims
     ) -> ProgressBarDoubleColors {
         let indicatorBackgroundColorToken: any ColorToken
         switch intent {
