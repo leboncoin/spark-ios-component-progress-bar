@@ -1,5 +1,5 @@
 //
-//  ProgressBarColorsTests.swift
+//  ProgressBarColorsDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -10,7 +10,8 @@
 import SparkTheme
 import XCTest
 
-final class ProgressBarColorsTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarColorsDeprecatedTests: XCTestCase {
 
     // MARK: - Tests
 
