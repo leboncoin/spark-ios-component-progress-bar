@@ -1,5 +1,5 @@
 //
-//  ProgressBarAnimatedData+ExtensionTests.swift
+//  ProgressBarIndeterminateAnimatedData+ExtensionTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 29/09/2023.
@@ -9,7 +9,7 @@
 @testable import SparkComponentProgressBar
 import Foundation
 
-extension ProgressBarAnimatedData {
+extension ProgressBarIndeterminateAnimatedData {
 
     // MARK: - Properties
 
