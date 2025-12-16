@@ -1,5 +1,5 @@
 //
-//  ProgressBarViewModel.swift
+//  ProgressBarViewModelDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -9,7 +9,8 @@
 @_spi(SI_SPI) import SparkCommon
 import SparkTheming
 
-final class ProgressBarViewModel: ProgressBarMainViewModel<ProgressBarGetColorsUseCase> {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarViewModelDeprecated: ProgressBarMainViewModelDeprecated<ProgressBarGetColorsUseCaseDeprecated> {
 
     // MARK: - Initialization
 
@@ -24,12 +25,12 @@ final class ProgressBarViewModel: ProgressBarMainViewModel<ProgressBarGetColorsU
             theme: theme,
             intent: intent,
             shape: shape,
-            getColorsUseCase: ProgressBarGetColorsUseCase()
+            getColorsUseCase: ProgressBarGetColorsUseCaseDeprecated()
         )
     }
 }
 
 // MARK: - Extension
 
-extension ProgressBarViewModel: ProgressBarValueViewModel {
+extension ProgressBarViewModelDeprecated: ProgressBarValueViewModelDeprecated {
 }

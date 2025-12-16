@@ -1,5 +1,5 @@
 //
-// ProgressBarMainViewModelTests.swift
+// ProgressBarMainUIViewDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -13,7 +13,8 @@ import XCTest
 @_spi(SI_SPI) import SparkThemingTesting
 import Combine
 
-final class ProgressBarMainViewModelTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarMainUIViewDeprecatedTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -80,12 +81,12 @@ final class ProgressBarMainViewModelTests: XCTestCase {
 
         // **
         // Published properties
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             colors: stub.colorsPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: !isUIKit ? stub.colorsMock : nil
         )
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             cornerRadius: stub.cornerRadiusPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: !isUIKit ? stub.cornerRadiusMock : nil
@@ -101,7 +102,7 @@ final class ProgressBarMainViewModelTests: XCTestCase {
             givenDims: stub.themeMock.dims as? DimsGeneratedMock,
             expectedReturnValue: stub.colorsMock
         )
-        ProgressBarGetCornerRadiusUseCaseableMockTest.XCTAssert(
+        ProgressBarGetCornerRadiusUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getCornerRadiusUseCaseMock,
             expectedNumberOfCalls: (isUIKit ? 0 : 1),
             givenShape: shapeMock,
@@ -151,12 +152,12 @@ final class ProgressBarMainViewModelTests: XCTestCase {
         // THEN
         // **
         // Published properties
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             colors: stub.colorsPublisherMock,
             expectedNumberOfSinks: isUIKit ? 1 : 0,
             expectedValue: isUIKit ? stub.colorsMock : nil
         )
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             cornerRadius: stub.cornerRadiusPublisherMock,
             expectedNumberOfSinks: isUIKit ? 1 : 0,
             expectedValue: isUIKit ? stub.cornerRadiusMock : nil
@@ -172,7 +173,7 @@ final class ProgressBarMainViewModelTests: XCTestCase {
             givenDims: stub.themeMock.dims as? DimsGeneratedMock,
             expectedReturnValue: stub.colorsMock
         )
-        ProgressBarGetCornerRadiusUseCaseableMockTest.XCTAssert(
+        ProgressBarGetCornerRadiusUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getCornerRadiusUseCaseMock,
             expectedNumberOfCalls: (isUIKit ? 1 : 0),
             givenShape: shapeMock,
@@ -213,12 +214,12 @@ final class ProgressBarMainViewModelTests: XCTestCase {
 
         // **
         // Published properties
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             colors: stub.colorsPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: stub.colorsMock
         )
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             cornerRadius: stub.cornerRadiusPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: stub.cornerRadiusMock
@@ -234,7 +235,7 @@ final class ProgressBarMainViewModelTests: XCTestCase {
             givenDims: newTheme.dims as? DimsGeneratedMock,
             expectedReturnValue: stub.colorsMock
         )
-        ProgressBarGetCornerRadiusUseCaseableMockTest.XCTAssert(
+        ProgressBarGetCornerRadiusUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getCornerRadiusUseCaseMock,
             expectedNumberOfCalls: 1,
             givenShape: shapeMock,
@@ -284,13 +285,13 @@ final class ProgressBarMainViewModelTests: XCTestCase {
 
         // **
         // Published properties
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             colors: stub.colorsPublisherMock,
             expectedNumberOfSinks: givenIsDifferentNewValue ? 1 : 0,
             expectedValue: givenIsDifferentNewValue ? stub.colorsMock : nil
         )
 
-        ProgressBarMainViewModelPublisherTest.XCTSinksCount(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTSinksCount(
             cornerRadius: stub.cornerRadiusPublisherMock,
             expectedNumberOfSinks: 0
         )
@@ -348,12 +349,12 @@ final class ProgressBarMainViewModelTests: XCTestCase {
 
         // **
         // Published properties
-        ProgressBarMainViewModelPublisherTest.XCTSinksCount(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTSinksCount(
             colors: stub.colorsPublisherMock,
             expectedNumberOfSinks: 0
         )
 
-        ProgressBarMainViewModelPublisherTest.XCTAssert(
+        ProgressBarMainViewModelDeprecatedPublisherTest.XCTAssert(
             cornerRadius: stub.cornerRadiusPublisherMock,
             expectedNumberOfSinks: givenIsDifferentNewValue ? 1 : 0,
             expectedValue: givenIsDifferentNewValue ? stub.cornerRadiusMock : nil
@@ -361,7 +362,7 @@ final class ProgressBarMainViewModelTests: XCTestCase {
         // **
 
         // Use Cases
-        ProgressBarGetCornerRadiusUseCaseableMockTest.XCTAssert(
+        ProgressBarGetCornerRadiusUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getCornerRadiusUseCaseMock,
             expectedNumberOfCalls: givenIsDifferentNewValue ? 1 : 0,
             givenShape: newValue,
@@ -373,7 +374,7 @@ final class ProgressBarMainViewModelTests: XCTestCase {
 
 // MARK: - Stub
 
-private final class Stub: ProgressBarMainViewModelStub {
+private final class Stub: ProgressBarMainViewModelDeprecatedStub {
 
     // MARK: - Associated Type
 
@@ -408,12 +409,12 @@ private final class Stub: ProgressBarMainViewModelStub {
         let getColorsUseCaseMock = Stub.GetColorsUseCase()
         getColorsUseCaseMock.executeWithIntentAndColorsAndDimsReturnValue = self.colorsMock
 
-        let getCornerRadiusUseCaseMock = ProgressBarGetCornerRadiusUseCaseableGeneratedMock()
+        let getCornerRadiusUseCaseMock = ProgressBarGetCornerRadiusUseCaseDeprecatedableGeneratedMock()
         getCornerRadiusUseCaseMock.executeWithShapeAndBorderReturnValue = self.cornerRadiusMock
         // **
 
         // View Model
-        let viewModel = ProgressBarMainViewModel(
+        let viewModel = ProgressBarMainViewModelDeprecated(
             for: frameworkType,
             theme: self.themeMock,
             intent: intent,

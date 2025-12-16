@@ -1,5 +1,5 @@
 //
-//  ProgressBarValueViewModelTests.swift
+//  ProgressBarValueViewModelDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -10,13 +10,14 @@ import Foundation
 import XCTest
 @testable import SparkComponentProgressBar
 
-final class ProgressBarValueViewModelTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarValueViewModelDeprecatedTests: XCTestCase {
 
     // MARK: - Tests
 
     func test_isValidIndicatorValue_when_value_parameter_is_valid() throws {
         // GIVEN
-        let viewModel = ProgressBarValueViewModelMock()
+        let viewModel = ProgressBarValueViewModelDeprecatedMock()
 
         let values = [
             0,
@@ -40,7 +41,7 @@ final class ProgressBarValueViewModelTests: XCTestCase {
 
     func test_isValidIndicatorValue_when_value_parameter_is_invalid() throws {
         // GIVEN
-        let viewModel = ProgressBarValueViewModelMock()
+        let viewModel = ProgressBarValueViewModelDeprecatedMock()
 
         let values = [
             -0.1 as CGFloat,
@@ -64,5 +65,5 @@ final class ProgressBarValueViewModelTests: XCTestCase {
 
 // MARK: - Mock
 
-private struct ProgressBarValueViewModelMock: ProgressBarValueViewModel {
+private struct ProgressBarValueViewModelDeprecatedMock: ProgressBarValueViewModelDeprecated {
 }

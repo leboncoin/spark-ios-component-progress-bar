@@ -11,6 +11,7 @@ import Combine
 @_spi(SI_SPI) import SparkCommon
 import SparkTheming
 
+@available(*, deprecated, message: "Use SparkProgressBarIndeterminate instead")
 public struct ProgressBarIndeterminateView: View {
 
     // MARK: - Type alias
@@ -20,7 +21,7 @@ public struct ProgressBarIndeterminateView: View {
 
     // MARK: - Properties
 
-    @ObservedObject var viewModel: ProgressBarIndeterminateViewModel
+    @ObservedObject var viewModel: ProgressBarIndeterminateViewModelDeprecated
     @State private var animationStepTimer = Self.createTimer()
     @State private var width: CGFloat = .zero
 
@@ -50,7 +51,7 @@ public struct ProgressBarIndeterminateView: View {
     // MARK: - View
 
     public var body: some View {
-        ProgressBarContentView(
+        ProgressBarContentViewDeprecated(
             trackCornerRadius: self.viewModel.cornerRadius,
             trackBackgroundColor: self.viewModel.colors?.trackBackgroundColorToken,
             indicatorView: {

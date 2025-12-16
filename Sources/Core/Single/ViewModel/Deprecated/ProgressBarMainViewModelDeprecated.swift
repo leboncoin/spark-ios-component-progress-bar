@@ -1,5 +1,5 @@
 //
-// ProgressBarMainViewModel.swift
+// ProgressBarMainViewModelDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -12,7 +12,8 @@ import SparkTheming
 
 // sourcery: AutoPublisherTest, AutoViewModelStub
 // sourcery: <GetColorsUseCase> = "ProgressBarMainGetColorsUseCaseableGeneratedMock"
-class ProgressBarMainViewModel<
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+class ProgressBarMainViewModelDeprecated<
     GetColorsUseCase: ProgressBarMainGetColorsUseCaseable
 >: ObservableObject {
 
@@ -31,7 +32,7 @@ class ProgressBarMainViewModel<
     // MARK: - Private Properties
 
     private let getColorsUseCase: GetColorsUseCase
-    private let getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseable
+    private let getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseDeprecatedable
 
     // MARK: - Initialization
 
@@ -41,7 +42,7 @@ class ProgressBarMainViewModel<
         intent: GetColorsUseCase.Intent,
         shape: ProgressBarShape,
         getColorsUseCase: GetColorsUseCase,
-        getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseable = ProgressBarGetCornerRadiusUseCase()
+        getCornerRadiusUseCase: any ProgressBarGetCornerRadiusUseCaseDeprecatedable = ProgressBarGetCornerRadiusUseCaseDeprecated()
     ) {
         self.frameworkType = frameworkType
 

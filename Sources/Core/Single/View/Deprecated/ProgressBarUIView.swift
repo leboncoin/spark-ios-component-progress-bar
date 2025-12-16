@@ -13,7 +13,8 @@ import SwiftUI
 import SparkTheming
 
 /// The UIKit version for the progress bar.
-public final class ProgressBarUIView: ProgressBarMainUIView {
+@available(*, deprecated, message: "Use SparkUIProgressBar instead")
+public final class ProgressBarUIView: ProgressBarMainUIViewDeprecated {
 
     // MARK: - Public Properties
 
@@ -58,7 +59,7 @@ public final class ProgressBarUIView: ProgressBarMainUIView {
 
     // MARK: - Private Properties
 
-    private let viewModel: ProgressBarViewModel
+    private let viewModel: ProgressBarViewModelDeprecated
 
     private var subscriptions = Set<AnyCancellable>()
 

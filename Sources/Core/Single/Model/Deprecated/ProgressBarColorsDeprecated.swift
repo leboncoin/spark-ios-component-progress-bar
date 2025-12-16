@@ -1,5 +1,5 @@
 //
-//  ProgressBarColors.swift
+//  ProgressBarColorsDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -8,12 +8,14 @@
 
 import SparkTheming
 
-protocol ProgressBarMainColors: Hashable, Equatable {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+protocol ProgressBarMainColorsDeprecated: Hashable, Equatable {
     var trackBackgroundColorToken: any ColorToken { get }
     var indicatorBackgroundColorToken: any ColorToken { get }
 }
 
-struct ProgressBarColors: ProgressBarMainColors {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+struct ProgressBarColorsDeprecated: ProgressBarMainColorsDeprecated {
 
     // MARK: - Properties
 
@@ -23,14 +25,14 @@ struct ProgressBarColors: ProgressBarMainColors {
 
 // MARK: Hashable & Equatable
 
-extension ProgressBarColors {
+extension ProgressBarColorsDeprecated {
 
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.trackBackgroundColorToken)
         hasher.combine(self.indicatorBackgroundColorToken)
     }
 
-    static func == (lhs: ProgressBarColors, rhs: ProgressBarColors) -> Bool {
+    static func == (lhs: ProgressBarColorsDeprecated, rhs: ProgressBarColorsDeprecated) -> Bool {
         return lhs.trackBackgroundColorToken.equals(rhs.trackBackgroundColorToken) &&
         lhs.indicatorBackgroundColorToken.equals(rhs.indicatorBackgroundColorToken)
     }

@@ -1,5 +1,5 @@
 //
-//  ProgressBarColorsTests.swift
+//  ProgressBarColorsDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -10,19 +10,20 @@
 import SparkTheme
 import XCTest
 
-final class ProgressBarColorsTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarColorsDeprecatedTests: XCTestCase {
 
     // MARK: - Tests
 
     func testEqual() {
         let colors = SparkTheme.shared.colors
 
-        let colors1 = ProgressBarColors(
+        let colors1 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
 
-        let colors2 = ProgressBarColors(
+        let colors2 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
@@ -33,12 +34,12 @@ final class ProgressBarColorsTests: XCTestCase {
     func testNotEqual() {
         let colors = SparkTheme.shared.colors
 
-        let colors1 = ProgressBarColors(
+        let colors1 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
 
-        let colors2 = ProgressBarColors(
+        let colors2 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.onMain
         )
