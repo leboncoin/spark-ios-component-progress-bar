@@ -12,7 +12,8 @@ import Combine
 import SparkTheming
 
 /// The UIKit version for the progress bar indeterminate.
-public final class ProgressBarIndeterminateUIView: ProgressBarMainUIView {
+@available(*, deprecated, message: "Use SparkUIProgressBarIndeterminate instead")
+public final class ProgressBarIndeterminateUIView: ProgressBarMainUIViewDeprecated {
 
     // MARK: - Type alias
 
@@ -52,7 +53,7 @@ public final class ProgressBarIndeterminateUIView: ProgressBarMainUIView {
 
     // MARK: - Private Properties
 
-    private let viewModel: ProgressBarIndeterminateViewModel
+    private let viewModel: ProgressBarIndeterminateViewModelDeprecated
 
     var indicatorLeadingConstraint: NSLayoutConstraint?
 

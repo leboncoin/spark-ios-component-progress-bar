@@ -1,5 +1,5 @@
 //
-//  ProgressBarContentView.swift
+//  ProgressBarContentViewDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 27/09/2023.
@@ -10,7 +10,8 @@ import SwiftUI
 @_spi(SI_SPI) import SparkCommon
 import SparkTheming
 
-struct ProgressBarContentView<IndicatorView: View>: View {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+struct ProgressBarContentViewDeprecated<IndicatorView: View>: View {
 
     // MARK: - Type alias
 

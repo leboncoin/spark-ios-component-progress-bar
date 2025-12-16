@@ -10,6 +10,7 @@ import SwiftUI
 @_spi(SI_SPI) import SparkCommon
 import SparkTheming
 
+@available(*, deprecated, message: "Use SparkProgressBar instead")
 public struct ProgressBarView: View {
 
     // MARK: - Type alias
@@ -19,7 +20,7 @@ public struct ProgressBarView: View {
 
     // MARK: - Properties
 
-    @ObservedObject var viewModel: ProgressBarViewModel
+    @ObservedObject var viewModel: ProgressBarViewModelDeprecated
 
     private let value: CGFloat
 
@@ -49,7 +50,7 @@ public struct ProgressBarView: View {
     // MARK: - View
 
     public var body: some View {
-        ProgressBarContentView(
+        ProgressBarContentViewDeprecated(
             trackCornerRadius: self.viewModel.cornerRadius,
             trackBackgroundColor: self.viewModel.colors?.trackBackgroundColorToken,
             indicatorView: {

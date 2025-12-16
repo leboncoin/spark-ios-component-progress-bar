@@ -1,5 +1,5 @@
 //
-//  ProgressBarIndeterminateViewModel.swift
+//  ProgressBarIndeterminateViewModelDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -12,7 +12,8 @@ import SparkTheming
 
 // sourcery: AutoPublisherTest, AutoViewModelStub
 /// Indeterminate ViewModel use the IndeterminateStyle ViewModel because the style are the same
-final class ProgressBarIndeterminateViewModel: ProgressBarMainViewModel<ProgressBarGetColorsUseCase> {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarIndeterminateViewModelDeprecated: ProgressBarMainViewModelDeprecated<ProgressBarGetColorsUseCaseDeprecated> {
 
     // MARK: - Properties
 
@@ -36,7 +37,7 @@ final class ProgressBarIndeterminateViewModel: ProgressBarMainViewModel<Progress
         intent: ProgressBarIntent,
         shape: ProgressBarShape,
         isAnimating: Bool,
-        getColorsUseCase: ProgressBarGetColorsUseCase = ProgressBarGetColorsUseCase(),
+        getColorsUseCase: ProgressBarGetColorsUseCaseDeprecated = ProgressBarGetColorsUseCaseDeprecated(),
         getAnimatedDataUseCase: any ProgressBarIndeterminateGetAnimatedDataUseCaseable = ProgressBarIndeterminateGetAnimatedDataUseCase()
     ) {
         self.isAnimating = isAnimating

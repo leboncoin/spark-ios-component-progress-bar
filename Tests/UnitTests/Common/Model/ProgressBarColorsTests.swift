@@ -17,12 +17,12 @@ final class ProgressBarColorsTests: XCTestCase {
     func testEqual() {
         let colors = SparkTheme.shared.colors
 
-        let colors1 = ProgressBarColors(
+        let colors1 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
 
-        let colors2 = ProgressBarColors(
+        let colors2 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
@@ -33,12 +33,12 @@ final class ProgressBarColorsTests: XCTestCase {
     func testNotEqual() {
         let colors = SparkTheme.shared.colors
 
-        let colors1 = ProgressBarColors(
+        let colors1 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.main
         )
 
-        let colors2 = ProgressBarColors(
+        let colors2 = ProgressBarColorsDeprecated(
             trackBackgroundColorToken: colors.base.background,
             indicatorBackgroundColorToken: colors.main.onMain
         )

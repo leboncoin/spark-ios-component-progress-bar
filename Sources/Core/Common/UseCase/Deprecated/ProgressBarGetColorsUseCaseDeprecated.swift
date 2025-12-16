@@ -9,6 +9,7 @@
 import SparkTheming
 
 // sourcery: AutoMockable, AutoMockTest
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
 protocol ProgressBarMainGetColorsUseCaseable {
     associatedtype Intent: Equatable
     associatedtype Return: Equatable
@@ -19,7 +20,8 @@ protocol ProgressBarMainGetColorsUseCaseable {
                  dims: any Dims) -> Return
 }
 
-struct ProgressBarGetColorsUseCase: ProgressBarMainGetColorsUseCaseable {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+struct ProgressBarGetColorsUseCaseDeprecated: ProgressBarMainGetColorsUseCaseable {
 
     // MARK: - Methods
 
@@ -27,7 +29,7 @@ struct ProgressBarGetColorsUseCase: ProgressBarMainGetColorsUseCaseable {
         intent: ProgressBarIntent,
         colors: any Colors,
         dims: any Dims
-    ) -> ProgressBarColors {
+    ) -> ProgressBarColorsDeprecated {
         let indicatorBackgroundColorToken: any ColorToken
         switch intent {
         case .accent:

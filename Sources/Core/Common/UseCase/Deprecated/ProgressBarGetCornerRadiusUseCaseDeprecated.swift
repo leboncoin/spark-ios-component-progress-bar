@@ -1,5 +1,5 @@
 //
-//  ProgressBarGetCornerRadiusUseCase.swift
+//  ProgressBarGetCornerRadiusUseCaseDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 06/10/2023.
@@ -10,7 +10,8 @@ import Foundation
 import SparkTheming
 
 // sourcery: AutoMockable, AutoMockTest
-protocol ProgressBarGetCornerRadiusUseCaseable {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+protocol ProgressBarGetCornerRadiusUseCaseDeprecatedable {
 
     // sourcery: border = "Identical"
     func execute(
@@ -19,7 +20,8 @@ protocol ProgressBarGetCornerRadiusUseCaseable {
     ) -> CGFloat
 }
 
-struct ProgressBarGetCornerRadiusUseCase: ProgressBarGetCornerRadiusUseCaseable {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+struct ProgressBarGetCornerRadiusUseCaseDeprecated: ProgressBarGetCornerRadiusUseCaseDeprecatedable {
 
     // MARK: - Type alias
 

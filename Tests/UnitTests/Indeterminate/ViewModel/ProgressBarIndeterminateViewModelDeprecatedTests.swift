@@ -1,5 +1,5 @@
 //
-//  ProgressBarIndeterminateViewModelTests.swift
+//  ProgressBarIndeterminateViewModelDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 21/09/2023.
@@ -14,7 +14,8 @@ import XCTest
 @_spi(SI_SPI) import SparkThemingTesting
 import Combine
 
-final class ProgressBarIndeterminateViewModelTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarIndeterminateViewModelDeprecatedTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -63,35 +64,35 @@ final class ProgressBarIndeterminateViewModelTests: XCTestCase {
         // Published properties
 
         // Is Animating
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             isAnimating: stub.isAnimatingPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: givenIsAnimating
         )
 
         // Animation data
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animatedData: stub.animatedDataPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: nil
         )
 
         // Animation type
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationType: stub.animationTypePublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: nil
         )
 
         // Animation status
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationStatus: stub.animationStatusPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: isSwiftUI ? .stop : nil
         )
 
         // Indicator opacity
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             indicatorOpacity: stub.indicatorOpacityPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: isSwiftUI ? 0 : nil
@@ -126,34 +127,34 @@ final class ProgressBarIndeterminateViewModelTests: XCTestCase {
         // Published properties
 
         // Is Animating
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             isAnimating: stub.isAnimatingPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: givenIsAnimating
         )
 
         // Animation data
-        ProgressBarIndeterminateViewModelPublisherTest.XCTSinksCount(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTSinksCount(
             animatedData: stub.animatedDataPublisherMock,
             expectedNumberOfSinks: 0
         )
 
         // Animation type
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationType: stub.animationTypePublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: .easeIn
         )
 
         // Animation status
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationStatus: stub.animationStatusPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: .start
         )
 
         // Indicator opacity
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             indicatorOpacity: stub.indicatorOpacityPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: 1
@@ -186,7 +187,7 @@ final class ProgressBarIndeterminateViewModelTests: XCTestCase {
 
         // THEN
         // Published properties
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animatedData: stub.animatedDataPublisherMock,
             expectedNumberOfSinks: 1,
             expectedValue: stub.animatedData
@@ -236,14 +237,14 @@ final class ProgressBarIndeterminateViewModelTests: XCTestCase {
         // Published properties
 
         // Animation type
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationType: stub.animationTypePublisherMock,
             expectedNumberOfSinks: givenIsAnimating ? 1 : 0,
             expectedValue: animationType
         )
 
         // Animation status
-        ProgressBarIndeterminateViewModelPublisherTest.XCTAssert(
+        ProgressBarIndeterminateViewModelDeprecatedPublisherTest.XCTAssert(
             animationStatus: stub.animationStatusPublisherMock,
             expectedNumberOfSinks: givenIsAnimating ? 0 : 1,
             expectedValue: .stop
@@ -305,7 +306,7 @@ final class ProgressBarIndeterminateViewModelTests: XCTestCase {
     }
 }
 
-private final class Stub: ProgressBarIndeterminateViewModelStub {
+private final class Stub: ProgressBarIndeterminateViewModelDeprecatedStub {
 
     // MARK: - Properties
 
@@ -325,7 +326,7 @@ private final class Stub: ProgressBarIndeterminateViewModelStub {
 
         // **
         // View Model
-        let viewModel = ProgressBarIndeterminateViewModel(
+        let viewModel = ProgressBarIndeterminateViewModelDeprecated(
             for: frameworkType,
             theme: ThemeGeneratedMock.mocked(),
             intent: .main,

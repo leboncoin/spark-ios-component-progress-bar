@@ -1,5 +1,5 @@
 //
-//  ProgressBarGetColorsUseCaseTests.swift
+//  ProgressBarGetColorsUseCaseDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -12,7 +12,8 @@ import SwiftUI
 @_spi(SI_SPI) import SparkThemingTesting
 import SparkTheming
 
-final class ProgressBarGetColorsUseCaseTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarGetColorsUseCaseDeprecatedTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -86,7 +87,7 @@ final class ProgressBarGetColorsUseCaseTests: XCTestCase {
 
 // MARK: - Execute Testing
 
-private extension ProgressBarGetColorsUseCaseTests {
+private extension ProgressBarGetColorsUseCaseDeprecatedTests {
 
     func testExecute(
         givenIntent: ProgressBarIntent,
@@ -97,7 +98,7 @@ private extension ProgressBarGetColorsUseCaseTests {
 
         let expectedTrackBackgroundColorToken = self.colorsMock.base.onBackground.opacity(dimsMock.dim4)
 
-        let useCase = ProgressBarGetColorsUseCase()
+        let useCase = ProgressBarGetColorsUseCaseDeprecated()
 
         // WHEN
         let colors = useCase.execute(

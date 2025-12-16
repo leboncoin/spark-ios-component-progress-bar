@@ -1,5 +1,5 @@
 //
-//  ProgressBarGetCornerRadiusUseCaseTests.swift
+//  ProgressBarGetCornerRadiusUseCaseDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 06/10/2023.
@@ -11,7 +11,8 @@ import SwiftUI
 @testable import SparkComponentProgressBar
 @_spi(SI_SPI) import SparkThemingTesting
 
-final class ProgressBarGetCornerRadiusUseCaseTests: XCTestCase {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+final class ProgressBarGetCornerRadiusUseCaseDeprecatedTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -36,14 +37,14 @@ final class ProgressBarGetCornerRadiusUseCaseTests: XCTestCase {
 
 // MARK: - Execute Testing
 
-private extension ProgressBarGetCornerRadiusUseCaseTests {
+private extension ProgressBarGetCornerRadiusUseCaseDeprecatedTests {
 
     func testExecute(
         givenShape: ProgressBarShape,
         expectedRadius: CGFloat
     ) {
         // GIVEN
-        let useCase = ProgressBarGetCornerRadiusUseCase()
+        let useCase = ProgressBarGetCornerRadiusUseCaseDeprecated()
 
         // WHEN
         let cornerRadius = useCase.execute(

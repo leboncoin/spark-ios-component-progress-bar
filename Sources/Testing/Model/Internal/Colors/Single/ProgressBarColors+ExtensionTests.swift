@@ -1,5 +1,5 @@
 //
-//  ProgressBarColors+ExtensionTests.swift
+//  ProgressBarColorsDeprecated+ExtensionTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 20/09/2023.
@@ -11,7 +11,7 @@
 import SparkTheming
 import SparkTheme
 
-extension ProgressBarColors {
+extension ProgressBarColorsDeprecated {
 
     // MARK: - Properties
 

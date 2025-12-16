@@ -1,5 +1,5 @@
 //
-//  ProgressBarMainUIView.swift
+//  ProgressBarMainUIViewDeprecated.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 25/09/2023.
@@ -11,7 +11,8 @@ import UIKit
 
 /// This ProgressMainBar view contains all communs subviews (track & indicator), styles, constraints, ... for all progress bars.
 /// This view doesn't have a public init.
-public class ProgressBarMainUIView: UIView {
+@available(*, deprecated, message: "Not used anymore by the new SparkProgressBar or SparkUIProgressBar")
+public class ProgressBarMainUIViewDeprecated: UIView {
 
     // MARK: - Type alias
 
@@ -178,7 +179,7 @@ public class ProgressBarMainUIView: UIView {
 
     /// Update the background color of the track and the indicator view
     /// This method is internal because it can be overriden by the view that inherits from this class
-    internal func updateColors(_ colors: any ProgressBarMainColors) {
+    internal func updateColors(_ colors: any ProgressBarMainColorsDeprecated) {
         self.trackView.backgroundColor = colors.trackBackgroundColorToken.uiColor
         self.indicatorView.backgroundColor = colors.indicatorBackgroundColorToken.uiColor
     }
