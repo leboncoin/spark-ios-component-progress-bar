@@ -1,5 +1,5 @@
 //
-//  ProgressBarIndeterminateGetAnimatedDataUseCaseTests.swift
+//  ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedTests.swift
 //  SparkComponentProgressBarTests
 //
 //  Created by robin.lemaire on 29/09/2023.
@@ -10,7 +10,7 @@ import XCTest
 import SwiftUI
 @testable import SparkComponentProgressBar
 
-final class ProgressBarIndeterminateGetAnimatedDataUseCaseTests: XCTestCase {
+final class ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedTests: XCTestCase {
 
     // MARK: - Properties
 
@@ -61,14 +61,14 @@ final class ProgressBarIndeterminateGetAnimatedDataUseCaseTests: XCTestCase {
 
 // MARK: - Execute Testing
 
-private extension ProgressBarIndeterminateGetAnimatedDataUseCaseTests {
+private extension ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedTests {
 
     func testExecute(
         givenType: ProgressBarIndeterminateAnimationType?,
         expectedAnimatedData: ProgressBarIndeterminateAnimatedData
     ) {
         // GIVEN
-        let useCase = ProgressBarIndeterminateGetAnimatedDataUseCase()
+        let useCase = ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecated()
 
         // WHEN
         let animatedData = useCase.execute(
