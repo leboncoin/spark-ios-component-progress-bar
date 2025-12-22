@@ -15,6 +15,13 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
     case test1
     case test2
     case test3
+    case documentation
+
+    // MARK: - Properties
+
+    var isDocumentation: Bool {
+        self == .documentation
+    }
 
     // MARK: - Type Alias
 
@@ -22,14 +29,16 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
 
     // MARK: - Configurations
 
-    func configuration<Intent: CaseIterable>() throws -> [ProgressBarConfigurationSnapshotTests<Intent>] {
+    func configuration() -> [ProgressBarConfigurationSnapshotTests] {
         switch self {
         case .test1:
             return self.test1()
         case .test2:
-            return try self.test2()
+            return self.test2()
         case .test3:
-            return try self.test3()
+            return self.test3()
+        case .documentation:
+            return self.documentation()
         }
     }
 
@@ -45,17 +54,14 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
     ///  - shape: default
     ///  - mode : all
     ///  - size : default
-    private func test1<Intent: CaseIterable>() -> [ProgressBarConfigurationSnapshotTests<Intent>] {
-        let intentPossibilities = Intent.allCases
+    private func test1() -> [ProgressBarConfigurationSnapshotTests] {
+        let intents = ProgressBarIntent.allCases
 
-        return intentPossibilities.map { intent -> ProgressBarConfigurationSnapshotTests<Intent> in
+        return intents.map { intent -> ProgressBarConfigurationSnapshotTests in
             .init(
                 scenario: self,
                 intent: intent,
-                shape: .square,
-                value: 0.5,
-                modes: Constants.Modes.all,
-                sizes: Constants.Sizes.default
+                modes: Constants.Modes.all
             )
         }
     }
@@ -70,16 +76,13 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
     /// - shapes: all
     /// - mode : default
     /// - sizes : all
-    private func test2<Intent: CaseIterable>() throws -> [ProgressBarConfigurationSnapshotTests<Intent>] {
-        let shapesPossibilities = ProgressBarShape.allCases
+    private func test2() -> [ProgressBarConfigurationSnapshotTests] {
+        let shapes = ProgressBarShape.allCases
 
-        return try shapesPossibilities.map { shape -> ProgressBarConfigurationSnapshotTests<Intent> in
+        return shapes.map { shape -> ProgressBarConfigurationSnapshotTests in
             .init(
                 scenario: self,
-                intent: try Intent.firstCase,
                 shape: shape,
-                value: 0.5,
-                modes: Constants.Modes.default,
                 sizes: Constants.Sizes.all
             )
         }
@@ -95,39 +98,30 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
     /// - shape: default
     /// - mode : default
     /// - sizes : all
-    private func test3<Intent: CaseIterable>() throws -> [ProgressBarConfigurationSnapshotTests<Intent>] {
+    private func test3() -> [ProgressBarConfigurationSnapshotTests] {
         let valuesPossibilities = [0, 0.3, 0.75, 1]
 
-        return try valuesPossibilities.map { value -> ProgressBarConfigurationSnapshotTests<Intent> in
+        return valuesPossibilities.map { value -> ProgressBarConfigurationSnapshotTests in
             .init(
                 scenario: self,
-                intent: try Intent.firstCase,
-                shape: .square,
                 value: value,
-                modes: Constants.Modes.default,
                 sizes: Constants.Sizes.all
             )
         }
     }
-}
 
-// MARK: - Extension
+    // MARK: - Documentation
 
-private extension CaseIterable {
+    // Used to generate screenshot for Documentation
+    private func documentation() -> [ProgressBarConfigurationSnapshotTests] {
+        var items: [ProgressBarConfigurationSnapshotTests] = []
 
-    static var firstCase: Self {
-        get throws {
-            guard let firstCase = Self.allCases.first else {
-                throw ProgressBarScenarioError.noIntent
-            }
+        // ProgressBar
+        items.append(.init(
+            scenario: self,
+            documentationName: "default"
+        ))
 
-            return firstCase
-        }
+        return items
     }
-}
-
-// MARK: - Error
-
-private enum ProgressBarScenarioError: Error {
-    case noIntent
 }
