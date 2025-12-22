@@ -1,5 +1,5 @@
 //
-//  ProgressBarIndeterminateGetAnimatedDataUseCase.swift
+//  ProgressBarIndeterminateGetAnimationDataUseCase.swift
 //  SparkComponentProgressBar
 //
 //  Created by robin.lemaire on 29/09/2023.
@@ -9,14 +9,14 @@
 import Foundation
 
 // sourcery: AutoMockable, AutoMockTest
-protocol ProgressBarIndeterminateGetAnimatedDataUseCaseable {
+protocol ProgressBarIndeterminateGetAnimationDataUseCaseable {
     func execute(
         type: ProgressBarIndeterminateAnimationType?,
         trackWidth: CGFloat
     ) -> ProgressBarIndeterminateAnimatedData
 }
 
-struct ProgressBarIndeterminateGetAnimatedDataUseCase: ProgressBarIndeterminateGetAnimatedDataUseCaseable {
+struct ProgressBarIndeterminateGetAnimationDataUseCase: ProgressBarIndeterminateGetAnimationDataUseCaseable {
 
     // MARK: - Type alias
 

@@ -100,7 +100,7 @@ final class ProgressBarIndeterminateViewModelDeprecatedTests: XCTestCase {
         // **
 
         // Use Cases
-        ProgressBarIndeterminateGetAnimatedDataUseCaseableMockTest.XCTAssert(
+        ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getAnimatedDataUseCaseMock,
             expectedNumberOfCalls: 0,
             expectedReturnValue: stub.animatedData
@@ -162,7 +162,7 @@ final class ProgressBarIndeterminateViewModelDeprecatedTests: XCTestCase {
         // **
 
         // Use Cases
-        ProgressBarIndeterminateGetAnimatedDataUseCaseableMockTest.XCTAssert(
+        ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getAnimatedDataUseCaseMock,
             expectedNumberOfCalls: 0,
             expectedReturnValue: stub.animatedData
@@ -194,7 +194,7 @@ final class ProgressBarIndeterminateViewModelDeprecatedTests: XCTestCase {
         )
 
         // Use Case
-        ProgressBarIndeterminateGetAnimatedDataUseCaseableMockTest.XCTAssert(
+        ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getAnimatedDataUseCaseMock,
             expectedNumberOfCalls: 1,
             givenType: stub.viewModel.animationType,
@@ -296,7 +296,7 @@ final class ProgressBarIndeterminateViewModelDeprecatedTests: XCTestCase {
         }
 
         // THEN
-        ProgressBarIndeterminateGetAnimatedDataUseCaseableMockTest.XCTAssert(
+        ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedableMockTest.XCTAssert(
             stub.getAnimatedDataUseCaseMock,
             expectedNumberOfCalls: 1,
             givenType: givenType,
@@ -320,7 +320,7 @@ private final class Stub: ProgressBarIndeterminateViewModelDeprecatedStub {
     ) {
         // **
         // Use Cases
-        let getAnimatedDataUseCaseMock = ProgressBarIndeterminateGetAnimatedDataUseCaseableGeneratedMock()
+        let getAnimatedDataUseCaseMock = ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedableGeneratedMock()
         getAnimatedDataUseCaseMock.executeWithTypeAndTrackWidthReturnValue = self.animatedData
         // **
 

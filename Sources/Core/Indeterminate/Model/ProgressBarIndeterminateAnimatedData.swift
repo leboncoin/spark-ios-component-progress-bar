@@ -12,6 +12,6 @@ struct ProgressBarIndeterminateAnimatedData: Equatable {
 
     // MARK: - Properties
 
-    let leadingSpaceWidth: CGFloat
-    let indicatorWidth: CGFloat
+    var leadingSpaceWidth: CGFloat = .zero
+    var indicatorWidth: CGFloat = .zero
 }

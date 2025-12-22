@@ -27,7 +27,7 @@ final class ProgressBarIndeterminateViewModelDeprecated: ProgressBarMainViewMode
     @Published private(set) var animationStatus: ProgressBarIndeterminateStatus?
     @Published private(set) var indicatorOpacity: Double?
 
-    private let getAnimatedDataUseCase: any ProgressBarIndeterminateGetAnimatedDataUseCaseable
+    private let getAnimatedDataUseCase: any ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedable
 
     // MARK: - Initialization
 
@@ -38,7 +38,7 @@ final class ProgressBarIndeterminateViewModelDeprecated: ProgressBarMainViewMode
         shape: ProgressBarShape,
         isAnimating: Bool,
         getColorsUseCase: ProgressBarGetColorsUseCaseDeprecated = ProgressBarGetColorsUseCaseDeprecated(),
-        getAnimatedDataUseCase: any ProgressBarIndeterminateGetAnimatedDataUseCaseable = ProgressBarIndeterminateGetAnimatedDataUseCase()
+        getAnimatedDataUseCase: any ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecatedable = ProgressBarIndeterminateGetAnimatedDataUseCaseDeprecated()
     ) {
         self.isAnimating = isAnimating
 

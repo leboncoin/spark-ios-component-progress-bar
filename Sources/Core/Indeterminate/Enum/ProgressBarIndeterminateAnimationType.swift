@@ -14,6 +14,7 @@ enum ProgressBarIndeterminateAnimationType: Equatable {
     // MARK: - Properties
 
     /// Get the next animation type
+    @available(*, deprecated, message: "Not used anymore by the new SparkProgressBarIndeterminate or SparkUIProgressBarIndeterminate")
     mutating func next() {
         switch self {
         case .easeIn:
