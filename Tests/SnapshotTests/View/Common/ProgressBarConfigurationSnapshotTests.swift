@@ -10,28 +10,44 @@
 @_spi(SI_SPI) import SparkCommonSnapshotTesting
 import XCTest
 
-struct ProgressBarConfigurationSnapshotTests<Intent: CaseIterable> {
+struct ProgressBarConfigurationSnapshotTests {
 
     // MARK: - Properties
 
     let scenario: ProgressBarScenarioSnapshotTests
 
-    let intent: Intent
-    let shape: ProgressBarShape
-    let value: CGFloat
-    var bottomValue: CGFloat { return self.value + 0.1 }
+    var intent: ProgressBarIntent = .default
+    var shape: ProgressBarShape = .default
+    var value: CGFloat = 0.5
     let width: CGFloat = 100
-    let modes: [ComponentSnapshotTestMode]
-    let sizes: [UIContentSizeCategory]
 
-    // MARK: - Getter
+    var modes: [ComponentSnapshotTestMode] = ComponentSnapshotTestConstants.Modes.default
+    var sizes: [UIContentSizeCategory] = ComponentSnapshotTestConstants.Sizes.default
 
-    func testName() -> String {
+    // MARK: - Name
+
+    var name: String {
+        guard self.documentationName == nil else {
+            return ""
+        }
+
         return [
             "\(self.scenario.rawValue)",
             "\(self.intent)",
             "\(self.shape)" + "Shape",
             "\(self.value)" + "Value"
-        ].joined(separator: "-")
+        ]
+            .compactMap { $0 }
+            .joined(separator: "-")
     }
+
+    var testName: String {
+        return if let documentationName {
+            "progress_bar_" + documentationName
+        } else {
+            self.scenario.rawValue
+        }
+    }
+
+    var documentationName: String?
 }
