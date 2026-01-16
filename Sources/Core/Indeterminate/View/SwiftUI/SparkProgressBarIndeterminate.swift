@@ -62,7 +62,7 @@ public struct SparkProgressBarIndeterminate: View {
 
     // MARK: - Initialization
 
-    /// Create an indeterminate progress tracker.
+    /// Create an indeterminate progress bar.
     ///
     /// - Parameters:
     ///   - isAnimated: Start or stop the animation of the progress bar.

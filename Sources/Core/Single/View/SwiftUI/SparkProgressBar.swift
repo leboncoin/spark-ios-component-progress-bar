@@ -68,7 +68,7 @@ public struct SparkProgressBar<Value>: View where Value: BinaryFloatingPoint {
 
     // MARK: - Initialization
 
-    /// Create a progress tracker with a value.
+    /// Create a progress bar with a value.
     ///
     /// - Parameters:
     ///   - value: The indicator value of the progress bar.

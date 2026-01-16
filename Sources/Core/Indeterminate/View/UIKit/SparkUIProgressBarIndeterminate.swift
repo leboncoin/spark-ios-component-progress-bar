@@ -59,7 +59,7 @@ public final class SparkUIProgressBarIndeterminate: ProgressBarContainerUIView {
 
     // MARK: - Initialization
 
-    /// Create an indeterminate progress tracker.
+    /// Create an indeterminate progress bar.
     ///
     /// - Parameters:
     ///   - theme: The current theme.
