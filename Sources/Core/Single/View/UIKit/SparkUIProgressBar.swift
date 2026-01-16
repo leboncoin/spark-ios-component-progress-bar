@@ -64,7 +64,7 @@ public final class SparkUIProgressBar: ProgressBarContainerUIView {
 
     // MARK: - Initialization
 
-    /// Create a progress tracker with a value.
+    /// Create a progress bar.
     ///
     /// - Parameters:
     ///   - theme: The current theme.
