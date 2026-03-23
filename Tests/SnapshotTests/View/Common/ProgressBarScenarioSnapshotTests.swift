@@ -93,7 +93,7 @@ enum ProgressBarScenarioSnapshotTests: String, CaseIterable {
     /// Description: To test some values for all a11y sizes
     ///
     /// Content:
-    /// - intent: basic
+    /// - intent: support
     /// - value : 0 + 0.3 + 0.75 + 1
     /// - shape: default
     /// - mode : default

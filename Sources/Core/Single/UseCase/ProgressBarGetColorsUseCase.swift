@@ -31,7 +31,6 @@ struct ProgressBarGetColorsUseCase: ProgressBarGetColorsUseCaseable {
         let indicatorBackgroundColorToken = switch intent {
         case .accent: colors.accent.accent
         case .alert: colors.feedback.alert
-        case .basic: colors.basic.basic
         case .danger: colors.feedback.error
         case .info: colors.feedback.info
         case .main: colors.main.main

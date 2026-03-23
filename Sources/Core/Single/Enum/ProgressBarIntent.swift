@@ -10,7 +10,6 @@
 public enum ProgressBarIntent: CaseIterable {
     case accent
     case alert
-    case basic
     case danger
     case info
     case main
@@ -20,6 +19,6 @@ public enum ProgressBarIntent: CaseIterable {
 
     // MARK: - Properties
 
-    /// The default case. Equals to **.basic**.
-    public static let `default`: Self = .basic
+    /// The default case. Equals to **.support**.
+    public static let `default`: Self = .support
 }

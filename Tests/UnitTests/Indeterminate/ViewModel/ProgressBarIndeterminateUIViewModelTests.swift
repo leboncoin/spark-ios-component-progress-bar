@@ -195,7 +195,7 @@ private final class Stub {
     // MARK: - Given
 
     let givenTheme = ThemeGeneratedMock.mocked()
-    let givenIntent: ProgressBarIntent = .basic
+    let givenIntent: ProgressBarIntent = .support
     let givenShape: ProgressBarShape = .rounded
     let givenIsAnimated: Bool = true
 

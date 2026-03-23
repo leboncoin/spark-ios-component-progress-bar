@@ -36,8 +36,6 @@ struct ProgressBarGetColorsUseCaseDeprecated: ProgressBarMainGetColorsUseCaseabl
             indicatorBackgroundColorToken = colors.accent.accent
         case .alert:
             indicatorBackgroundColorToken = colors.feedback.alert
-        case .basic:
-            indicatorBackgroundColorToken = colors.basic.basic
         case .danger:
             indicatorBackgroundColorToken = colors.feedback.error
         case .info:
