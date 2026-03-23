@@ -35,11 +35,11 @@ final class ProgressBarGetColorsUseCaseTests: XCTestCase {
         )
     }
 
-    func test_execute_colors_when_intent_is_basic() {
+    func test_execute_colors_when_intent_is_support() {
         // GIVEN / WHEN / THEN
         self.testExecute(
-            givenIntent: .basic,
-            expectedIndicatorColorToken: self.themeMock.colors.basic.basic
+            givenIntent: .support,
+            expectedIndicatorColorToken: self.themeMock.colors.support.support
         )
     }
 
@@ -80,14 +80,6 @@ final class ProgressBarGetColorsUseCaseTests: XCTestCase {
         self.testExecute(
             givenIntent: .success,
             expectedIndicatorColorToken: self.themeMock.colors.feedback.success
-        )
-    }
-
-    func test_execute_colors_when_intent_is_support() {
-        // GIVEN / WHEN / THEN
-        self.testExecute(
-            givenIntent: .support,
-            expectedIndicatorColorToken: self.themeMock.colors.support.support
         )
     }
 }

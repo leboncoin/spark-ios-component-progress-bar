@@ -18,7 +18,7 @@ final class ProgressBarIntentTests: XCTestCase {
         let defaultIntent = ProgressBarIntent.default
 
         // THEN
-        XCTAssertEqual(defaultIntent, .basic)
+        XCTAssertEqual(defaultIntent, .support)
     }
 
     func test_all_cases_count() {
@@ -26,7 +26,7 @@ final class ProgressBarIntentTests: XCTestCase {
         let allCases = ProgressBarIntent.allCases
 
         // THEN
-        XCTAssertEqual(allCases.count, 9)
+        XCTAssertEqual(allCases.count, 8)
     }
 
     func test_all_cases_contain_expected_values() {
@@ -36,7 +36,7 @@ final class ProgressBarIntentTests: XCTestCase {
         // THEN
         XCTAssertTrue(allCases.contains(.accent))
         XCTAssertTrue(allCases.contains(.alert))
-        XCTAssertTrue(allCases.contains(.basic))
+        XCTAssertTrue(allCases.contains(.support))
         XCTAssertTrue(allCases.contains(.danger))
         XCTAssertTrue(allCases.contains(.info))
         XCTAssertTrue(allCases.contains(.main))

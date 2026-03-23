@@ -9,7 +9,7 @@
 /// The intent of the progress bar and progress bar indeterminate.
 public enum ProgressBarIntent: CaseIterable {
     case accent
-    case alert    
+    case alert
     case danger
     case info
     case main

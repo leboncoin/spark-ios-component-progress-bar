@@ -35,13 +35,6 @@ final class ProgressBarGetColorsUseCaseDeprecatedTests: XCTestCase {
         )
     }
 
-    func test_execute_when_intent_is_basic_case() throws {
-        try self.testExecute(
-            givenIntent: .basic,
-            expectedIndicatorBackgroundColorToken: self.colorsMock.basic.basic
-        )
-    }
-
     func test_execute_when_intent_is_danger_case() throws {
         try self.testExecute(
             givenIntent: .danger,
